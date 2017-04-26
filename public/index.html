@@ -1,0 +1,39 @@
+<html>
+  <head>
+  	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="app/app.js"></script>
+
+    <!-- Main -->
+    <script src="app/main/module.js"></script>
+    <script src="app/main/route.js"></script>
+    <script src="app/main/controller.js"></script>
+
+    <!-- Services -->
+    <script src="app/services/module.js"></script>
+    <script src="app/services/Person.js"></script>
+    <script src="app/services/Api.js"></script>
+
+
+    <style>.active { color: red; font-weight: bold; }</style>
+  </head>
+
+  <body ng-app="testApp">
+	<nav class="navbar navbar-default">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <a class="navbar-brand" ui-sref="main">Test App</a>
+	    </div>
+	    <ul class="nav navbar-nav">
+	      <li><a ui-sref="main">Home</a></li>
+	      <li><a ui-sref="person">Person List</a></li>
+	    </ul>
+	  </div>
+	</nav>  
+  	<div class="container" ui-view></div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>    
+  </body>
+</html>
+

@@ -1,0 +1,38 @@
+
+<form>
+	<div class="form-group">
+		<label for="first_name">First Name</label>
+    	<input type="text" class="form-control" id="first_name" placeholder="First Name" ng-model="person.first_name">
+
+	</div>
+	<div class="form-group">
+		<label for="last_name">Last Name</label>
+    	<input type="text" class="form-control" id="last_name" placeholder="Last Name" ng-model="person.last_name">
+    		
+	</div>	
+	<div class="form-group">
+		<label for="contact_number">Contact Number</label>
+    	<input type="text" class="form-control" id="contact_number" placeholder="Contact Number" ng-model="person.contact_number">
+    		
+	</div>
+	<button type="submit" class="btn btn-primary" ng-click="addPerson()">Add Person</button>		
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Contact Number</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="person in persons">
+      <th scope="row">1</th>
+      <td><a href="/#!/person/{{person.id}}">{{person.first_name}}</a></td>
+      <td><a href="/#!/person/{{person.id}}">{{person.last_name}}</a></td>
+      <td><a href="/#!/person/{{person.id}}">{{person.contact_number}}</a></td>
+    </tr>
+  </tbody>
+</table>
